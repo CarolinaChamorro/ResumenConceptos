@@ -1,0 +1,19 @@
+h1{
+    color: brown;
+    text-align: center;
+    font-size: 35px;
+}
+h2{
+    color: rgb(28, 4, 83);
+    text-align: start;
+    font-size: 20px;
+}
+h3{
+    color: rgb(0, 0, 0);
+    text-align: start;
+    font-size: 20px; 
+}
+p{
+    font-size: 15px;
+    color: rgb(11, 11, 48);
+}

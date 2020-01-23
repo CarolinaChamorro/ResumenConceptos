@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Resumen sobre Pogramación Orientada a Objetos</title>
+</head>
+
+<body>
+    <h1>Resumen de conceptos básicos</h1>
+    <h2>Capítulo 2.- Principios POO</h2>
+    <p> Necesitamos un modelo porque es una simplificación de la realidad,
+        que nos permite reducir la complejidad que ofrece una visión desde una perspectiva particular
+        y nos ayuda a razonar acerca de una relación entre las entidades.
+
+    </p>
+    <p>Esta característica de simplificación se conoce generalmente como abstracción,
+        y que a veces se considera uno de los principios de la programación orientada a objetos.
+        Modelar la realidad no sólo implica la definición de objetos con características relevantes para un propósito
+        específico. También incluye
+        la definición de las relaciones entre los objetos, como Asociación, Agregación y Composición.</p>
+
+    <h3>Asociación</h3>
+    <p>La asociación  se refiere objetos autónomos.
+        Esto significa que un objeto puede existir sin el otro, y no hay ningún objeto que posee al otro.</p>
+    <img src="img/asociacion.PNG" alt="asociacion">
+    <p>Como podemos ver en el ejemplo, se puede asociar entre objetos
+        usando una simple referencia objeto a través de una propiedad.</p>
+    <h3>Agregación</h3>
+    <p> La agregación es el mecanismo que le permite crear un objeto que consta de varios objetos.</p>
+    <p> Cada objeto tiene una vida es a menudo llamado agregar y el objeto de propiedad
+        se llama componente. Sin embargo, cada objeto tiene una vida independiente. </p>
+    <img src="img/agregacion.PNG" alt="agregacion">
+    <p>Los objetos añadidos al objeto empleados  ayuda a definir
+        el objeto de la empresa, sino que son independientes de ella.
+        Si se elimina el objeto de la empresa, cada una de las personas aún se conservan.</p>
+<h3>Composición</h3>
+<p>La composición es un tipo de agregación un poco mas intensa y detallada, donde cada objeto componente tiene vida independiente.</p>
+<img src="img/composicion.PNG" alt="composición">
+<h3>Encapsulación</h3>
+<p> Tiene la capacidad de albergar en una sola entidad tanto datos (propiedades) y funciones (métodos), ocultando los detalles internos dando
+    a conocer su mera acción.Este es un principio muy potente, que se encuentra a menudo en el mundo real que nos permite utilizar un objeto
+     sin saber cómo funciona internamente.
+</p>
+<img src="img/encapsulacion.PNG" alt="encapsulacion">
+<h3>Herencia</h3>
+<p> Permite nuevos objetos para adquirir las propiedades de los objetos existentes. Esta relación entre dos objetos es muy común y se puede encontrar 
+    en muchas situaciones de la vida real. Por lo general, se refiere a la creación de un objeto especializado a partir de una más general. Es adquirir
+las propiedades y metodos existentes de un Padre(objeto) a un Hijo(objeto).</p>
+<img src="img/herencia.PNG" alt="herencia">
+<h3>Polimorfismo</h3>
+<p>Tiene la capacidad de manejar múltiples tipos de datos de manera uniforme.se refiere al hecho de tener varios métodos con el mismo nombre y la misma implementación.
+    el polimorfismo de clases, que consiste en que un objeto de una clase derivada es al mismo tiempo un objeto de la clase padre, de forma que allí donde 
+    se utilice un objeto de la clase padre también se puede utilizar uno de la clase hija.
+</p>
+<img src="img/polimorfismo.PNG" alt="polimorfismo">
+<h2>Capítulo 3.- Encapsular y ocultar información</h2>
+<p>Nos permite empaquetarlo en un objeto tanto los datos y funcionalidades que operan sobre esos datos.Utilizando los métodos expuestos por el objeto a manipular los datos, tomamos 
+    ventaja del principio de encapsulación haciendo caso omiso de su complejidad y los detalles de 
+    implementación interna.</p>
+    <p>. Esta característica, llamada el principio de ocultación de información,
+        a menudo se relaciona con la encapsulación, aunque es un principio más general. 
+        El principio de ocultación de información hace cumplir el diseño de objetos que tiene al menos
+         dos partes: una parte pública y una privada. Sólo la parte pública es accesible por los clientes que quieren interactuar con el objeto.
+    </p>
+    <h3>Privacidad Pública</h3>
+<p> Todas las propiedades y métodos son de acceso público si no se toma ninguna precaución. Un primer enfoque 
+    sencillo consiste en la adopción de nombres basado en la convención de miembros internos de un objeto. </p>
+    <img src="img/publica.PNG" alt="publica">
+    <h3>Privacidad Privada</h3>
+<p>Por lo tanto, si queremos evitar el acceso a algunas propiedades o 
+    métodos relativos a los detalles de implementación interna, tenemos que establecer una estrategia.Static</p>
+<img src="img/privada.PNG" alt="privada">
+<h3>Scope y Closure</h3>
+<p>El scope es el alcance de una variable, puede ser de dos tipos, global y local. Una variable cuyo scope es 
+    global se puede acceder desde cualquier parte del código, una local solo desde la función que la contiene.</p>
+    <h3>Scope Global</h3>
+    <p>Podemos acceder tanto fuera como dentro de una función debido a haberla definido fuera de cualquier función.</p>
+<img src="img/global.PNG" alt="global">
+<h3>Scope Local</h3>
+    <p>Podemos acceder a ella dentro dicha función, cuando ejecutamos local() te muestra correctamente 2, mientras
+         que si haces console.log(a) te va a dar error porque a no esta definida, para el scope global esa variable no existe.</p>
+<img src="img/local.PNG" alt="local">
+<h3>Closure</h3>
+    <p>Un closure es una función que es libre de variables, esto quiere decir que las variables de la función padre funcionan,
+         pero el closure no tiene variables propias.</p>
+<img src="img/closure.PNG" alt="closure">
+<h3>Meta closure con IIFE</h3>
+<p>Se trata de las envolturas de funciones que podemos crear para aislar un código fuente y evitar colisiones de variables
+     o espacios de nombres en general.</p>
+<img src="img/meta.PNG" alt="meta-closure">
+<h3>WeakMpas</h3>
+<p>El objeto WeakMap es una colección de pares clave/valor en la que las claves son objetos y los valores son valores arbitrarios.
+    Las claves de los WeakMaps solamente pueden ser del tipo Object. Los Primitive data types como claves no están permitidos 
+    (ej. un Symbol no pueden ser una clave de WeakMap).
+</p>
+<img src="img/weakMaps.PNG" alt="WeakMaps">
+<h3>Getters and Setters</h3>
+<p>Una función que obtiene un valor de una propiedad se llama getter y una que establece el valor de una propiedad se llama setter.
+Esta característica a sido implementada en ES2015, pudiendo modificar el funcionamiento normal de establecer u obtener el valor de 
+una propiedad, a estas se les conoce como accessor properties.</p>
+<p>En ocasiones queremos valores basados en otros valores, para esto los data accessors son bastante útiles.
+ Para crearlos usamos los keywords get y set</p>
+<img src="img/gettersSetters.PNG" alt="gettersSetters">
+<h3>Ocultar Información con clases ES6</h3>
+<p>La aplicación del principio de ocultación de información utilizando las mejoras de sintaxis ES6 no es tan diferente. 
+    Como dijimos en la introducción de ellos, clases ES6 no son más que un nuevo enfoque sintáctico para definir métodos y 
+    constructores para nuestros objetos. Los principale
+    beneficios incluyen una sintaxis más concisa y la aplicación de las mejores prácticas en la implementación interna de la 
+    creación de objetos.</p>
+<img src="img/es6.PNG" alt="ES6">
+</body>
+<script>
+    //Logica de los conceptos basicos
+    //Asociacion. 
+    class Persona {
+        constructor(nombre, apellido) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.familia = null;
+        }
+    }
+
+    //Agregacion. Resulatdo en la foto
+    /*  var empresaGrande={nombre:'Google',empleados:[]}
+ undefined
+ empresaGrande.empleados.push(girl)
+ 1
+ empresaGrande.empleados.push(boy)
+ 2
+ empresaGrande.empleados
+ (2) [Persona, Persona]
+ 0: Persona {nombre: "Lauren", apellido: "Jauregui", familia: null}
+ 1: Persona {nombre: "Justin", apellido: "Bieber", familia: Persona}
+ length: 2
+ __proto__: Array(0) */
+
+    //Composicion
+   /*  let chica={ci:'1750135830',nombre:'Taylor',apellido:'Jauregui',
+    direccion:{callePrincipal:'Av.Maldonado y S56-129',ciudad:'Quito'}}
+
+chica
+{ci: "1750135830", nombre: "Taylor", apellido: "Jauregui", direccion: {…}}ci: "1750135830"nombre: "Taylor"apellido: "Jauregui"direccion: {callePrincipal: "Av.Maldonado y S56-129", ciudad: "Quito"}__proto__: Object
+chica.direccion.callePrincipal
+"Av.Maldonado y S56-129"
+chica.apellido
+"Jauregui"
+chica.direccion.ciudad
+"Quito"
+chica.ci
+"1750135830" */
+    //Encapsulacion
+    class Empresa{
+    constructor(nombre,empleados=[]){
+        this.nombre=nombre;
+        this.empleados=empleados;
+    }
+    presentar(){
+        return "Hola a todos y bienvenidos a "+this.nombre;
+    }
+}
+//resultados
+var empresas=new Empresa("Amazon")
+empresas.presentar()
+"Hola a todos y bienvenidos a Amazon"
+var negocio=new Empresa("Samsung")
+negocio.presentar()
+"Hola a todos y bienvenidos a Samsung"
+
+//Herencia
+class Padre{
+    constructor(nombre,apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+    saludar(){
+        return "Hola soy "+this.nombre+" "+this.apellido;
+    }
+}
+class Hijo extends Padre{
+    constructor(nombre,apellido){
+        super(nombre,apellido);
+        this.familia=[];
+    }
+    agregarPadre(padre){
+        this.familia.push(padre);
+    }
+}
+//resultados
+var personaPadre=new Padre("Alejandro","Cabello")
+undefined
+personaPadre.saludar()
+"Hola soy Alejandro Cabello"
+var personaHijo=new Hijo("Camila","Cabello")
+undefined
+personaHijo.saludar()
+"Hola soy Camila Cabello"
+//Polimorfismo
+class Person{
+      constructor(age,weight){
+          this.age=age;
+    this.weight=weight;
+      }
+      getInfo(){
+          return "I am " + this.age + " years old " +
+        "and weighs " + this.weight +" kilo.";
+      }
+  }
+  class Employee{
+      constructor(age,weight,salary){
+          this.salary=salary;
+    this.age=age;
+    this.weight=weight;
+      }
+      getInfo(){
+          return "I am " + this.age + " years old " +
+        "and weighs " + this.weight +" kilo " +
+        "and earns " + this.salary + " dollar.";
+      }
+  }
+  function showInfo(obj) {
+    console.log(obj.getInfo());
+  }
+ 
+  var person = new Person(50,90);
+  var employee = new Employee(43,80,50000);
+  showInfo(person);
+  showInfo(employee);
+// acceder a la informacion
+class TheatreSeats{
+    constructor(seats=[]){
+        this._seats=seats;
+    }
+}
+TheatreSeats.prototype.placePerson = function (persona) { this._seats.push (persona); };
+ var theatreSeats = new TheatreSeats ()
+ theatreSeats.placePerson(nombre="Hugo");
+ // propiedad privada
+ class Teatro{
+     static nombre="Carolina";
+     constructor(persona){
+         this.persona=persona;
+     }
+ }
+ 
+
+// funcion global
+ var a = 1;
+function global() {
+ console.log(a);
+}
+global();
+console.log(a);
+
+//funcion local
+function local() {
+ var a = 2;
+ console.log(a);
+}
+local();
+console.log(a);
+// closure
+/*function crearSuma(a) {
+  return function(b) {
+    return a + b
+  }
+}
+var sumar5 = crearSuma(5);
+var sumar10 = crearSuma(10);
+console.log(sumar5(15));
+console.log(sumar10(15));*/
+// meta-closure
+var i = -1;
+var f = (function(state) { // this will hold a snapshot of i
+            return function() {
+               return state; // this returns what was in the snapshot
+            };
+         })(i); // here we invoke the outermost function, passing it i (which is -1).
+                // it returns the inner function, with state as -1
+i = 1; // has no impact on the state variable
+f(); // now we invoke the inner function, and it looks up state, not i
+//WeakMap
+/*const SimpleDate = (function() {
+  const _years = new WeakMap();
+  const _months = new WeakMap();
+  const _days = new WeakMap();
+  class SimpleDate {
+    constructor(year, month, day) {
+      // Check that (year, month, day) is a valid date
+      // ...
+
+      // If it is, use it to initialize "this" date
+      _years.set(this, year);
+      _months.set(this, month);
+      _days.set(this, day);
+    }
+    addDays(nDays) {
+      // Increase "this" date by n days
+      // ...
+    }
+    getDay() {
+      return _days.get(this);
+    }
+  }
+
+  return SimpleDate;
+}());*/
+
+//es6 ocultar informacion
+/*var  TheatreSeats = (function() {  "use strict"; 
+ var priv = new WeakMap();  
+ var _= function(instance) {
+     return priv.get(instance);};
+
+  class TheatreSeatsClass {    constructor() {      
+  var privateMembers = {seats: []};
+      priv.set(this, privateMembers);      
+      this.maxSize = 10;
+    }
+    placePerson(person) {     
+     _(this).seats.push(person);    }
+    countOccupiedSeats() {     
+     return _(this).seats.length;    }
+    isSoldOut() {     
+     return _(this).seats.length >= this.maxSize;    }
+    countFreeSeats() {     
+     return this.maxSize - _(this).seats.length;    }  }
+  return  TheatreSeatsClass;
+}());*/
+
+
+// getters y setters
+const obj = {
+  get prop() {
+    return this.__prop__;
+  },
+  set prop(value) {
+    this.__prop__ = value * 2;
+  },
+};
+
+obj.prop = 12;
+
+console.log(obj.prop); //24
+
+</script>
+</html>
